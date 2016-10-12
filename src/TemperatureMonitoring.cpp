@@ -31,34 +31,5 @@ int main(void)
     SystemCoreClockUpdate();
 #endif
 
-    swm_config_i2c();
-    i2c_reset();
-	disp_on( DISP_SHOW_NONE );
-	disp_reset( DISP_SHOW_NONE );
-
-	tm_reset_data();
-	/**
-	 * TODO: Oscar to remove this
-	 */
-	int i;
-	for( i=0; i<9; i++){
-		tm_handle_sensor();
-	}
-	display_message_t trend = tm_get_trend();
-	disp_show_message( trend );
-	/**
-	 * TODO: Oscar to remove until here
-	 */
-	while( 1 ){
-		/**
-		 * TODO: Oscar to remove this
-		 */
-		tm_handle_sensor();
-		trend = tm_get_trend();
-		disp_show_message( trend );
-		/**
-		 * TODO: Oscar to remove until here
-		 */
-	}
     return 0 ;
 }
