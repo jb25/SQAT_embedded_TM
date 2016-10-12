@@ -49,5 +49,5 @@ int tm_handle_sensor()
 
 display_message_t tm_get_trend()
 {
-	return -1;
+	return DISP_MSG_SAME; // default
 }

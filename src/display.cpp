@@ -118,6 +118,6 @@ static void rotate_message_left()
 //
 int disp_show_message(display_message_t message)
 {
-
+	const int addr = HW_I2C_ADDR_HT16K33;
 	return i2c_write( addr, disp_msg_data,10 );
 }

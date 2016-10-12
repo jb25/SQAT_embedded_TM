@@ -8,7 +8,7 @@
 #ifndef TM_H_
 #define TM_H_
 
-void tm_handle_sensor();
+int tm_handle_sensor();
 display_message_t tm_get_trend();
 void tm_reset_data();
 
